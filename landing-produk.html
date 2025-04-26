@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Landing Page Produk Estetik</title>
+  <title>Produk Terbaik Kami</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,17 +14,18 @@
     }
 
     body {
-      background: linear-gradient(135deg, #f0faff, #e0f7fa);
+      background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+      min-height: 100vh;
       color: #333;
     }
 
     header {
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      background: linear-gradient(135deg, #00b4db, #0083b0);
       color: white;
       text-align: center;
       padding: 70px 20px;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
 
     header h1 {
@@ -46,98 +47,89 @@
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 40px;
-      color: #4a47a3;
+      color: #0083b0;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
 
     .product-card {
-      background: linear-gradient(135deg, #fef9f9, #e9f1f7);
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: all 0.4s ease;
+      transition: transform 0.3s;
       text-align: center;
-      padding: 25px 20px;
+      padding: 20px;
       position: relative;
     }
 
     .product-card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      transform: translateY(-10px);
     }
 
     .product-card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
       margin-bottom: 15px;
-      border-radius: 15px;
+      border-radius: 10px;
     }
 
     .product-card h3 {
       font-size: 1.4rem;
-      margin-bottom: 8px;
-      color: #333;
+      margin-bottom: 10px;
     }
 
     .product-card p {
       color: #666;
       margin-bottom: 10px;
-      font-size: 0.9rem;
     }
 
-    .price {
+    .product-card .price {
+      color: #0083b0;
       font-weight: bold;
-      color: #0077b6;
-      margin-bottom: 10px;
       font-size: 1.2rem;
+      margin-bottom: 15px;
     }
 
     .btn {
       display: inline-block;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      background: linear-gradient(135deg, #00b4db, #0083b0);
       color: white;
       padding: 10px 20px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      transition: all 0.3s ease;
-      margin-top: 10px;
+      transition: background 0.3s;
     }
 
     .btn:hover {
-      background: linear-gradient(135deg, #66a6ff, #89f7fe);
-      transform: scale(1.05);
+      background: #005f73;
     }
 
     .badge {
       position: absolute;
       top: 15px;
       left: 15px;
-      background: #ff6f91;
+      background: #ff4081;
       color: white;
+      font-size: 0.75rem;
       padding: 5px 10px;
-      font-size: 0.8rem;
-      border-radius: 20px;
+      border-radius: 12px;
       font-weight: bold;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
     footer {
       margin-top: 50px;
       text-align: center;
       padding: 20px;
-      background: linear-gradient(135deg, #e0f7fa, #f0faff);
+      background: #e0e0e0;
       font-size: 14px;
       color: #555;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
     }
   </style>
 </head>
@@ -152,8 +144,7 @@
     <h2 class="section-title">Daftar Produk</h2>
 
     <div class="grid">
-      
-      <!-- Produk 1 -->
+
       <div class="product-card">
         <span class="badge">Promo</span>
         <img src="https://via.placeholder.com/300x200?text=Produk+1" alt="Produk 1">
@@ -162,3 +153,56 @@
         <div class="price">Rp 150.000</div>
         <a href="#" class="btn">Lihat Detail</a>
       </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=Produk+2" alt="Produk 2">
+        <h3>Produk 2</h3>
+        <p>Deskripsi produk singkat.</p>
+        <div class="price">Rp 120.000</div>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+
+      <div class="product-card">
+        <span class="badge">Best Seller</span>
+        <img src="https://via.placeholder.com/300x200?text=Produk+3" alt="Produk 3">
+        <h3>Produk 3</h3>
+        <p>Deskripsi produk singkat.</p>
+        <div class="price">Rp 99.000</div>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=Produk+4" alt="Produk 4">
+        <h3>Produk 4</h3>
+        <p>Deskripsi produk singkat.</p>
+        <div class="price">Rp 200.000</div>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=Produk+5" alt="Produk 5">
+        <h3>Produk 5</h3>
+        <p>Deskripsi produk singkat.</p>
+        <div class="price">Rp 175.000</div>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+
+      <div class="product-card">
+        <span class="badge">Baru</span>
+        <img src="https://via.placeholder.com/300x200?text=Produk+6" alt="Produk 6">
+        <h3>Produk 6</h3>
+        <p>Deskripsi produk singkat.</p>
+        <div class="price">Rp 250.000</div>
+        <a href="#" class="btn">Lihat Detail</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Rolandi WebDev. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
