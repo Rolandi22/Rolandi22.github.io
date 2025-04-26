@@ -3,32 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Website Topup Game</title>
+  <title>Topup Game - Rolandi WebDev</title>
+
+  <!-- Font Awesome buat ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <style>
-    body {
-      background: #0f2027;
-      color: white;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
       text-align: center;
+      padding: 100px 20px 50px;
+      position: relative;
     }
-    a {
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
       color: #00bcd4;
-      margin-top: 20px;
-      text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #00bcd4;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #00bcd4;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 5px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      background: #222;
+    }
+
+    .product img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      color: #aaa;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #008c9e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #111;
+      margin-top: 50px;
+      color: #888;
+    }
+
+    .faq {
+      margin-top: 50px;
+    }
+
+    .faq-item {
+      background: #1f1f1f;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .faq-item h4 {
+      margin-bottom: 10px;
+      color: #00bcd4;
     }
   </style>
 </head>
 <body>
-  <h1>Website Topup Game</h1>
-  <p>Ini adalah contoh halaman project Topup Game.</p>
-  <a href="index.html">Kembali ke Portfolio</a>
+
+  <header>
+    <h1>Topup Game</h1>
+    <p>Mudah, Cepat, dan Aman. Top-up favoritmu sekarang!</p>
+  </header>
+
+  <section class="container">
+    <h2 class="section-title">Pilih Game</h2>
+
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/100x100?text=MLBB" alt="Mobile Legends">
+        <h3>Mobile Legends</h3>
+        <p>Top-up diamond MLBB tercepat dan termurah.</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/100x100?text=FF" alt="Free Fire">
+        <h3>Free Fire</h3>
+        <p>Isi diamond Free Fire langsung masuk!</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/100x100?text=PUBG" alt="PUBG Mobile">
+        <h3>PUBG Mobile</h3>
+        <p>Top-up UC PUBG Mobile resmi dan aman.</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/100x100?text=Genshin" alt="Genshin Impact">
+        <h3>Genshin Impact</h3>
+        <p>Top-up Genesis Crystals cepat dan terpercaya.</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq">
+      <h2 class="section-title">FAQ</h2>
+
+      <div class="faq-item">
+        <h4>Bagaimana cara top-up?</h4>
+        <p>Cukup pilih game, masukkan ID akun, pilih nominal, dan lakukan pembayaran.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Apakah aman?</h4>
+        <p>Top-up dilakukan melalui jalur resmi dan data kamu dijamin aman.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Metode pembayaran apa saja yang tersedia?</h4>
+        <p>Kami menerima e-wallet, transfer bank, dan pembayaran retail.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Rolandi Web Developer. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
