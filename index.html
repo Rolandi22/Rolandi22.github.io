@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rolandi | Web Developer</title>
+  <meta name="description" content="Portfolio Rolandi - Web Developer & Frontend Enthusiast. Membuat website modern, kreatif, dan responsif.">
+  <meta name="author" content="Rolandi">
 
   <!-- Font Awesome buat ikon sosial media -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
-    /* Reset */
+    /* Reset dan Basic */
     * {
       margin: 0;
       padding: 0;
@@ -23,10 +25,10 @@
       line-height: 1.6;
     }
 
-    header {
-      text-align: center;
-      padding: 100px 20px;
+    header, footer {
       background: #111;
+      text-align: center;
+      padding: 80px 20px;
     }
 
     header h1 {
@@ -70,11 +72,16 @@
       padding-bottom: 10px;
     }
 
-    .skills-list {
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul.skills-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       list-style: none;
       margin-top: 20px;
     }
@@ -92,6 +99,7 @@
       margin-bottom: 20px;
       border-radius: 10px;
       transition: transform 0.3s;
+      text-align: center;
     }
 
     .project:hover {
@@ -112,7 +120,7 @@
       flex-direction: column;
       gap: 15px;
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     input, textarea {
@@ -137,13 +145,6 @@
       background: #008c9e;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #111;
-      margin-top: 50px;
-    }
-
     .social-links {
       margin-top: 15px;
     }
@@ -165,7 +166,7 @@
 <body>
 
   <!-- Hero Section -->
-  <header id="hero">
+  <header>
     <h1>Rolandi</h1>
     <p>Web Developer | Frontend Enthusiast</p>
     <a href="#contact" class="btn">Hubungi Saya</a>
@@ -177,7 +178,7 @@
     <p>Saya Rolandi, seorang pengembang web yang passionate dalam membangun website modern, kreatif, dan responsif. Fokus utama saya adalah membuat pengalaman pengguna yang menyenangkan melalui desain bersih dan fungsional.</p>
   </section>
 
-  <!-- Skills -->
+  <!-- Keahlian -->
   <section id="skills" class="container">
     <h2>Keahlian</h2>
     <ul class="skills-list">
@@ -190,38 +191,38 @@
     </ul>
   </section>
 
-  <!-- Proyek Saya -->
+  <!-- Proyek -->
   <section id="projects" class="container">
     <h2>Proyek Saya</h2>
 
     <div class="project">
       <h3>Website Topup Game</h3>
-      <p>Website layanan top-up Mobile Legends, dengan animasi interaktif dan desain responsif.</p>
-      <a href="topup-game.html" target="_blank" class="btn">Lihat Project</a>
+      <p>Layanan top-up Mobile Legends dengan animasi dan desain responsif.</p>
+      <a href="https://rolandi22.github.io/topup-game.html" target="_blank" class="btn">Lihat Project</a>
     </div>
 
     <div class="project">
       <h3>Landing Page Produk</h3>
-      <p>Landing page profesional untuk mempromosikan produk digital dan layanan online.</p>
-      <a href="landing-produk.html" target="_blank" class="btn">Lihat Project</a>
+      <p>Landing page profesional untuk promosi produk digital.</p>
+      <a href="https://rolandi22.github.io/landing-produk.html" target="_blank" class="btn">Lihat Project</a>
     </div>
 
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>Website portfolio pribadi untuk menampilkan karya dan skill profesional.</p>
-      <a href="portfolio.html" target="_blank" class="btn">Lihat Project</a>
+      <p>Website portfolio untuk menampilkan karya dan skill profesional.</p>
+      <a href="https://rolandi22.github.io/portfolio.html" target="_blank" class="btn">Lihat Project</a>
     </div>
 
     <div class="project">
       <h3>Blog Pribadi</h3>
-      <p>Website blog minimalis untuk menulis pengalaman dan sharing pengetahuan.</p>
-      <a href="blog.html" target="_blank" class="btn">Lihat Project</a>
+      <p>Blog minimalis untuk sharing pengalaman dan pengetahuan.</p>
+      <a href="https://rolandi22.github.io/blog.html" target="_blank" class="btn">Lihat Project</a>
     </div>
 
     <div class="project">
       <h3>Aplikasi To-Do List</h3>
-      <p>Website aplikasi catatan tugas sederhana, dibuat dengan HTML, CSS, dan JavaScript.</p>
-      <a href="todo-list.html" target="_blank" class="btn">Lihat Project</a>
+      <p>Aplikasi catatan tugas sederhana berbasis web.</p>
+      <a href="https://rolandi22.github.io/todo-list.html" target="_blank" class="btn">Lihat Project</a>
     </div>
   </section>
 
@@ -248,7 +249,7 @@
       <input type="text" name="name" placeholder="Nama Anda" required>
       <input type="email" name="email" placeholder="Email Anda" required>
       <textarea name="message" placeholder="Pesan Anda" required></textarea>
-      <button type="submit" class="btn">Kirim</button>
+      <button type="submit">Kirim</button>
     </form>
   </section>
 
