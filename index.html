@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rolandi | Web Developer</title>
 
+  <!-- Link Font Awesome buat ikon sosial media -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     /* Reset */
     * {
@@ -139,15 +142,20 @@
       margin-top: 50px;
     }
 
+    .social-links {
+      margin-top: 15px;
+    }
+
     .social-links a {
       color: #00bcd4;
       margin: 0 10px;
-      text-decoration: none;
-      transition: color 0.3s;
+      font-size: 1.5rem;
+      transition: color 0.3s, transform 0.3s;
     }
 
     .social-links a:hover {
       color: #fff;
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -232,7 +240,9 @@
   <footer>
     <p>&copy; 2025 Rolandi. Dibuat dengan penuh semangat.</p>
     <div class="social-links">
-      <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
     </div>
   </footer>
 
