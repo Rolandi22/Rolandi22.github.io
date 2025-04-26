@@ -1,8 +1,15 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Topup Game - Rolandi WebDev</title>  <!-- Font Awesome buat ikon -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  <style>
+  <title>Topup Game - Rolandi WebDev</title>
+
+  <!-- Font Awesome buat ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +26,7 @@
     header {
       background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
       text-align: center;
-      padding: 100px 20px 50px;
+      padding: 80px 20px 40px;
       position: relative;
     }
 
@@ -69,34 +76,37 @@
       padding: 20px;
       border-radius: 10px;
       text-align: center;
-      transition: transform 0.3s, background 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
 
     .product:hover {
       transform: translateY(-5px);
-      background: #222;
+      box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
     }
 
     .product img {
       width: 100px;
       height: 100px;
       margin-bottom: 15px;
-      object-fit: contain;
+      object-fit: cover;
+      border-radius: 10px;
     }
 
     .product h3 {
       font-size: 1.2rem;
       margin-bottom: 10px;
+      color: #fff;
     }
 
     .product p {
       color: #aaa;
+      font-size: 0.9rem;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 15px;
       padding: 10px 20px;
       background: #00bcd4;
       color: #fff;
@@ -110,16 +120,8 @@
       background: #008c9e;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #111;
-      margin-top: 50px;
-      color: #888;
-    }
-
     .faq {
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     .faq-item {
@@ -133,62 +135,81 @@
       margin-bottom: 10px;
       color: #00bcd4;
     }
-  </style></head>
-<body>  <header>
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #111;
+      margin-top: 50px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
     <h1>Topup Game</h1>
     <p>Mudah, Cepat, dan Aman. Top-up favoritmu sekarang!</p>
-  </header>  <section class="container">
-    <h2 class="section-title">Pilih Game</h2><div class="product-grid">
-  <div class="product">
-    <img src="https://i.ibb.co/0q0TDC7/mlbb.png" alt="Mobile Legends">
-    <h3>Mobile Legends</h3>
-    <p>Top-up diamond MLBB tercepat dan termurah.</p>
-    <a href="#" class="btn">Top-up Sekarang</a>
-  </div>
+  </header>
 
-  <div class="product">
-    <img src="https://i.ibb.co/5YV2fQZ/freefire.png" alt="Free Fire">
-    <h3>Free Fire</h3>
-    <p>Isi diamond Free Fire langsung masuk!</p>
-    <a href="#" class="btn">Top-up Sekarang</a>
-  </div>
+  <section class="container">
+    <h2 class="section-title">Pilih Game</h2>
 
-  <div class="product">
-    <img src="https://i.ibb.co/tcCFhK4/pubg.png" alt="PUBG Mobile">
-    <h3>PUBG Mobile</h3>
-    <p>Top-up UC PUBG Mobile resmi dan aman.</p>
-    <a href="#" class="btn">Top-up Sekarang</a>
-  </div>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/99/Mobile_Legends_Logo.png" alt="Mobile Legends">
+        <h3>Mobile Legends</h3>
+        <p>Top-up diamond MLBB tercepat dan termurah.</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
 
-  <div class="product">
-    <img src="https://i.ibb.co/qyCSpbs/genshin.png" alt="Genshin Impact">
-    <h3>Genshin Impact</h3>
-    <p>Top-up Genesis Crystals cepat dan terpercaya.</p>
-    <a href="#" class="btn">Top-up Sekarang</a>
-  </div>
-</div>
+      <div class="product">
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/6a/Free_Fire_logo.png" alt="Free Fire">
+        <h3>Free Fire</h3>
+        <p>Isi diamond Free Fire langsung masuk!</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
 
-<!-- FAQ Section -->
-<div class="faq">
-  <h2 class="section-title">FAQ</h2>
+      <div class="product">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/PUBG_Mobile_logo.png" alt="PUBG Mobile">
+        <h3>PUBG Mobile</h3>
+        <p>Top-up UC PUBG Mobile resmi dan aman.</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
 
-  <div class="faq-item">
-    <h4>Bagaimana cara top-up?</h4>
-    <p>Cukup pilih game, masukkan ID akun, pilih nominal, dan lakukan pembayaran.</p>
-  </div>
+      <div class="product">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Genshin_Impact_logo.png" alt="Genshin Impact">
+        <h3>Genshin Impact</h3>
+        <p>Top-up Genesis Crystals cepat dan terpercaya.</p>
+        <a href="#" class="btn">Top-up Sekarang</a>
+      </div>
+    </div>
 
-  <div class="faq-item">
-    <h4>Apakah aman?</h4>
-    <p>Top-up dilakukan melalui jalur resmi dan data kamu dijamin aman.</p>
-  </div>
+    <!-- FAQ Section -->
+    <div class="faq">
+      <h2 class="section-title">FAQ</h2>
 
-  <div class="faq-item">
-    <h4>Metode pembayaran apa saja yang tersedia?</h4>
-    <p>Kami menerima e-wallet, transfer bank, dan pembayaran retail.</p>
-  </div>
-</div>
+      <div class="faq-item">
+        <h4>Bagaimana cara top-up?</h4>
+        <p>Cukup pilih game, masukkan ID akun, pilih nominal, dan lakukan pembayaran.</p>
+      </div>
 
-  </section>  <footer>
-    <p>\u00a9 2025 Rolandi Web Developer. All rights reserved.</p>
-  </footer></body>
+      <div class="faq-item">
+        <h4>Apakah aman?</h4>
+        <p>Top-up dilakukan melalui jalur resmi dan data kamu dijamin aman.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Metode pembayaran apa saja yang tersedia?</h4>
+        <p>Kami menerima e-wallet, transfer bank, dan pembayaran retail.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Rolandi Web Developer. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
