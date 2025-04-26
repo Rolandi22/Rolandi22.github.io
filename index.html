@@ -3,262 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rolandi | Web Developer</title>
-  <meta name="description" content="Portfolio Rolandi - Web Developer & Frontend Enthusiast. Membuat website modern, kreatif, dan responsif.">
-  <meta name="author" content="Rolandi">
-
-  <!-- Font Awesome buat ikon sosial media -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+  <title>Rolandi Portfolio</title>
+  <meta name="description" content="Portfolio Rolandi - Web Developer Indonesia">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Reset dan Basic */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
     body {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #121212;
+      color: #f0f0f0;
     }
-
-    header, footer {
-      background: #111;
+    header {
+      background: #1f1f1f;
+      padding: 100px 20px;
       text-align: center;
-      padding: 80px 20px;
     }
-
     header h1 {
       font-size: 3rem;
       margin-bottom: 10px;
     }
-
     header p {
       font-size: 1.2rem;
-      margin-bottom: 20px;
+      color: #bbb;
     }
-
-    .btn {
-      background: #00bcd4;
-      color: #fff;
-      padding: 10px 20px;
+    nav {
+      background: #111;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #00bcd4;
+      margin: 0 15px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
-      transition: background 0.3s;
-      display: inline-block;
-      margin-top: 10px;
     }
-
-    .btn:hover {
-      background: #008c9e;
-    }
-
-    .container {
-      padding: 50px 20px;
-      max-width: 1100px;
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
-
     h2 {
       text-align: center;
       margin-bottom: 40px;
-      font-size: 2.5rem;
+      font-size: 2rem;
       border-bottom: 2px solid #00bcd4;
       display: inline-block;
       padding-bottom: 10px;
     }
-
-    p {
-      text-align: center;
-      margin-bottom: 20px;
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
     }
-
-    ul.skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      list-style: none;
-      margin-top: 20px;
-    }
-
-    .skills-list li {
-      background: #00bcd4;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-    }
-
-    .project {
-      background: rgba(255, 255, 255, 0.1);
+    .skills div, .projects div {
+      background: #1f1f1f;
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 10px;
-      transition: transform 0.3s;
       text-align: center;
     }
-
-    .project:hover {
-      transform: translateY(-5px);
-    }
-
-    .testimonial {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      font-style: italic;
-      text-align: center;
-    }
-
-    form {
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
       display: flex;
       flex-direction: column;
       gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
     }
-
     input, textarea {
       padding: 10px;
       border: none;
       border-radius: 5px;
-      resize: none;
     }
-
-    button[type="submit"] {
-      background: #00bcd4;
-      color: #fff;
+    button {
       padding: 10px;
       border: none;
-      cursor: pointer;
       border-radius: 5px;
+      background: #00bcd4;
+      color: #fff;
       font-weight: bold;
-      transition: background 0.3s;
+      cursor: pointer;
     }
-
-    button[type="submit"]:hover {
-      background: #008c9e;
+    footer {
+      text-align: center;
+      background: #111;
+      padding: 20px;
+      margin-top: 50px;
     }
-
-    .social-links {
-      margin-top: 15px;
-    }
-
-    .social-links a {
+    .socials a {
       color: #00bcd4;
       margin: 0 10px;
       font-size: 1.5rem;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    .social-links a:hover {
-      color: #fff;
-      transform: scale(1.2);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Hero Section -->
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#skills">Keahlian</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
   <header>
     <h1>Rolandi</h1>
     <p>Web Developer | Frontend Enthusiast</p>
-    <a href="#contact" class="btn">Hubungi Saya</a>
   </header>
 
-  <!-- Tentang Saya -->
-  <section id="about" class="container">
+  <section id="about">
     <h2>Tentang Saya</h2>
-    <p>Saya Rolandi, seorang pengembang web yang passionate dalam membangun website modern, kreatif, dan responsif. Fokus utama saya adalah membuat pengalaman pengguna yang menyenangkan melalui desain bersih dan fungsional.</p>
+    <p>Halo, saya Rolandi! Saya fokus di dunia web development, khususnya Frontend. Saya suka membangun website modern, responsif, dan user-friendly.</p>
   </section>
 
-  <!-- Keahlian -->
-  <section id="skills" class="container">
+  <section id="skills">
     <h2>Keahlian</h2>
-    <ul class="skills-list">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>Responsive Web Design</li>
-      <li>Git & GitHub</li>
-      <li>UI/UX Basic</li>
-    </ul>
-  </section>
-
-  <!-- Proyek -->
-  <section id="projects" class="container">
-    <h2>Proyek Saya</h2>
-
-    <div class="project">
-      <h3>Website Topup Game</h3>
-      <p>Layanan top-up Mobile Legends dengan animasi dan desain responsif.</p>
-      <a href="https://rolandi22.github.io/topup-game.html" target="_blank" class="btn">Lihat Project</a>
-    </div>
-
-    <div class="project">
-      <h3>Landing Page Produk</h3>
-      <p>Landing page profesional untuk promosi produk digital.</p>
-      <a href="https://rolandi22.github.io/landing-produk.html" target="_blank" class="btn">Lihat Project</a>
-    </div>
-
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>Website portfolio untuk menampilkan karya dan skill profesional.</p>
-      <a href="https://rolandi22.github.io/portfolio.html" target="_blank" class="btn">Lihat Project</a>
-    </div>
-
-    <div class="project">
-      <h3>Blog Pribadi</h3>
-      <p>Blog minimalis untuk sharing pengalaman dan pengetahuan.</p>
-      <a href="https://rolandi22.github.io/blog.html" target="_blank" class="btn">Lihat Project</a>
-    </div>
-
-    <div class="project">
-      <h3>Aplikasi To-Do List</h3>
-      <p>Aplikasi catatan tugas sederhana berbasis web.</p>
-      <a href="https://rolandi22.github.io/todo-list.html" target="_blank" class="btn">Lihat Project</a>
+    <div class="skills">
+      <div>HTML5</div>
+      <div>CSS3</div>
+      <div>JavaScript</div>
+      <div>Responsive Design</div>
+      <div>Git & GitHub</div>
     </div>
   </section>
 
-  <!-- Testimoni -->
-  <section id="testimonials" class="container">
-    <h2>Testimoni</h2>
-
-    <div class="testimonial">
-      <p>"Rolandi sangat profesional dan cepat dalam mengerjakan proyek kami. Sangat puas dengan hasilnya!"</p>
-      <h4>- Klien A</h4>
-    </div>
-
-    <div class="testimonial">
-      <p>"Websitenya keren banget, tampilannya modern dan loading cepat. Recommended!"</p>
-      <h4>- Klien B</h4>
+  <section id="projects">
+    <h2>Proyek</h2>
+    <div class="projects">
+      <div>
+        <h3>Website Topup</h3>
+        <p>Website topup MLBB, responsif dan cepat.</p>
+      </div>
+      <div>
+        <h3>Landing Page Produk</h3>
+        <p>Landing page clean untuk produk digital.</p>
+      </div>
+      <div>
+        <h3>Portfolio Web</h3>
+        <p>Website personal untuk menampilkan karya.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Kontak -->
-  <section id="contact" class="container">
-    <h2>Kontak Saya</h2>
-
-    <form action="https://formspree.io/f/xpwdwljp" method="POST">
+  <section id="contact">
+    <h2>Kontak</h2>
+    <form action="https://formspree.io/f/xpwdwljp" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Nama Anda" required>
       <input type="email" name="email" placeholder="Email Anda" required>
-      <textarea name="message" placeholder="Pesan Anda" required></textarea>
+      <textarea name="message" placeholder="Pesan" rows="5" required></textarea>
       <button type="submit">Kirim</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Rolandi. Dibuat dengan penuh semangat.</p>
-    <div class="social-links">
+    <p>&copy; 2025 Rolandi</p>
+    <div class="socials">
       <a href="https://www.instagram.com/rolandi_andreas21" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://rolandi22.github.io" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/rolandi22" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </footer>
 
