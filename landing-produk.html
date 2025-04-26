@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Landing Page Produk</title>
+  <title>Landing Page Produk Estetik</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,15 +14,17 @@
     }
 
     body {
-      background: #f5f7fa;
+      background: linear-gradient(135deg, #f0faff, #e0f7fa);
       color: #333;
     }
 
     header {
-      background: linear-gradient(135deg, #00b4db, #0083b0);
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
       color: white;
       text-align: center;
       padding: 70px 20px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
     }
 
     header h1 {
@@ -44,103 +46,119 @@
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 40px;
-      color: #0083b0;
+      color: #4a47a3;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      gap: 25px;
     }
 
     .product-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, #fef9f9, #e9f1f7);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s;
+      transition: all 0.4s ease;
       text-align: center;
-      padding: 20px;
+      padding: 25px 20px;
+      position: relative;
     }
 
     .product-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
     }
 
     .product-card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
       margin-bottom: 15px;
-      border-radius: 10px;
+      border-radius: 15px;
     }
 
     .product-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #333;
     }
 
     .product-card p {
       color: #666;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
     }
 
     .btn {
       display: inline-block;
-      background: #0083b0;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
       color: white;
       padding: 10px 20px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      margin-top: 10px;
     }
 
     .btn:hover {
-      background: #005f73;
+      background: linear-gradient(135deg, #66a6ff, #89f7fe);
+      transform: scale(1.05);
+    }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #ff6f91;
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      border-radius: 20px;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
     footer {
       margin-top: 50px;
       text-align: center;
       padding: 20px;
-      background: #e0e0e0;
+      background: linear-gradient(135deg, #e0f7fa, #f0faff);
       font-size: 14px;
       color: #555;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Produk Terlaris</h1>
-    <p>Temukan produk pilihan terbaik untukmu</p>
+    <h1>Produk Terbaik Kami</h1>
+    <p>Temukan pilihan produk estetik khusus untukmu!</p>
   </header>
 
   <section class="container">
     <h2 class="section-title">Daftar Produk</h2>
 
     <div class="grid">
+      
+      <!-- Produk 1 -->
       <div class="product-card">
+        <span class="badge">Promo</span>
         <img src="https://via.placeholder.com/300x200?text=Produk+1" alt="Produk 1">
         <h3>Produk 1</h3>
-        <p>Deskripsi singkat produk 1.</p>
+        <p>Deskripsi produk singkat.</p>
+        <div class="price">Rp 150.000</div>
         <a href="#" class="btn">Lihat Detail</a>
       </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x200?text=Produk+2" alt="Produk 2">
-        <h3>Produk 2</h3>
-        <p>Deskripsi singkat produk 2.</p>
-        <a href="#" class="btn">Lihat Detail</a>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x200?text=Produk+3" alt="Produk 3">
-        <h3>Produk 3</h3>
-        <p>Deskripsi singkat produk 3.</p>
-        <a href="#" class="btn">Lihat Detail</a>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x200?text=Produk
