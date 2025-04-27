@@ -2,12 +2,136 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog Pribadi | Rolandi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Pribadi Rolan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    nav {
+      background: #007bff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+    header {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      animation: fadeInCard 0.5s ease forwards;
+    }
+    @keyframes fadeInCard {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
-<body style="background:#0f2027; color:#fff; font-family:sans-serif; text-align:center; padding:100px;">
-  <h1>Blog Pribadi</h1>
-  <p>Halaman masih dalam pengembangan.</p>
-  <a href="index.html" style="color:#00bcd4; text-decoration:underline;">Kembali ke Beranda</a>
+<body>
+
+<nav>
+  <div><strong>Blog Rolan</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Blog Pribadi Rolan</h1>
+  <p>Berbagi pengalaman, cerita, dan ilmu bersama.</p>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Perjalanan Mulai Ngoding</h2>
+    <p>Cerita gue baru masuk dunia coding. Banyak struggle, tapi juga banyak serunya.</p>
+    <a href="#" class="btn">Baca Selengkapnya</a>
+  </div>
+
+  <div class="card">
+    <h2>Tips Belajar Online Produktif</h2>
+    <p>Belajar online tuh gampang males, tapi ada triknya biar tetap fokus dan produktif. Simak tips-tips gue!</p>
+    <a href="#" class="btn">Baca Selengkapnya</a>
+  </div>
+
+  <div class="card">
+    <h2>Pengalaman Bikin Proyek Pertama</h2>
+    <p>Waktu ngerjain proyek pertama kali, banyak pelajaran berharga. Mau tau apa aja?</p>
+    <a href="#" class="btn">Baca Selengkapnya</a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Rolan. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
