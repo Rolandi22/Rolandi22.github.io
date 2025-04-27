@@ -3,213 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Topup Game - Rolandi WebDev</title>
-
-  <!-- Font Awesome buat ikon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <title>Topup Game Gofxer</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
     }
-
-    body {
-      background: #0f0f0f;
-      color: #eee;
-      line-height: 1.6;
-    }
-
     header {
-      background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
       text-align: center;
-      padding: 80px 20px 40px;
-      position: relative;
+      padding: 50px 20px;
     }
-
     header h1 {
       font-size: 3rem;
       margin-bottom: 10px;
-      color: #00bcd4;
     }
-
     header p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: #00ffe1;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.5rem;
-      color: #00bcd4;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      width: 60px;
-      height: 3px;
-      background: #00bcd4;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 5px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-    }
-
-    .product {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
-    }
-
-    .product img {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 15px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .product h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    .product p {
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
     .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #00bcd4;
-      color: #fff;
+      background-color: #00ffe1;
+      color: #0f0c29;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
     }
-
     .btn:hover {
-      background: #008c9e;
+      background-color: #00c2b2;
     }
-
-    .faq {
-      margin-top: 60px;
+    section {
+      padding: 60px 20px;
+      text-align: center;
     }
-
-    .faq-item {
-      background: #1f1f1f;
+    .games-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .game-card {
+      background: rgba(255, 255, 255, 0.1);
       padding: 20px;
-      margin-bottom: 15px;
+      border-radius: 15px;
+      width: 220px;
+      transition: 0.3s;
+    }
+    .game-card:hover {
+      transform: scale(1.05);
+      background: rgba(0, 255, 225, 0.2);
+    }
+    form {
+      max-width: 400px;
+      margin: 40px auto;
+      background: rgba(0,0,0,0.5);
+      padding: 30px;
+      border-radius: 20px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: none;
       border-radius: 10px;
     }
-
-    .faq-item h4 {
-      margin-bottom: 10px;
-      color: #00bcd4;
-    }
-
     footer {
       text-align: center;
-      padding: 30px 20px;
-      background: #111;
-      margin-top: 50px;
-      color: #888;
+      padding: 20px;
+      background: #0f0c29;
+      margin-top: 30px;
+    }
+    .social-links a {
+      margin: 0 10px;
+      color: #00ffe1;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      color: #00c2b2;
+    }
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Topup Game</h1>
-    <p>Mudah, Cepat, dan Aman. Top-up favoritmu sekarang!</p>
-  </header>
+<header>
+  <h1>Topup Game Gofxer</h1>
+  <p>Proses Cepat • Harga Terbaik • 24/7 Support</p>
+  <a href="#topup" class="btn">Mulai Topup</a>
+</header>
 
-  <section class="container">
-    <h2 class="section-title">Pilih Game</h2>
+<section id="games">
+  <h2>Game Populer</h2>
+  <div class="games-list">
+    <div class="game-card">Mobile Legends</div>
+    <div class="game-card">PUBG Mobile</div>
+    <div class="game-card">Free Fire</div>
+    <div class="game-card">Valorant</div>
+    <div class="game-card">Genshin Impact</div>
+    <div class="game-card">COD Mobile</div>
+  </div>
+</section>
 
-    <div class="product-grid">
-      <div class="product">
-        <img src="https://upload.wikimedia.org/wikipedia/en/9/99/Mobile_Legends_Logo.png" alt="Mobile Legends">
-        <h3>Mobile Legends</h3>
-        <p>Top-up diamond MLBB tercepat dan termurah.</p>
-        <a href="#" class="btn">Top-up Sekarang</a>
-      </div>
+<section id="topup">
+  <h2>Form Topup</h2>
+  <form>
+    <input type="text" placeholder="Nama Lengkap" required>
+    <input type="text" placeholder="User ID Game" required>
+    <select required>
+      <option value="">Pilih Game</option>
+      <option value="mlbb">Mobile Legends</option>
+      <option value="pubg">PUBG Mobile</option>
+      <option value="ff">Free Fire</option>
+      <option value="valorant">Valorant</option>
+      <option value="genshin">Genshin Impact</option>
+    </select>
+    <select required>
+      <option value="">Nominal Topup</option>
+      <option value="10">10 Diamonds</option>
+      <option value="50">50 Diamonds</option>
+      <option value="100">100 Diamonds</option>
+      <option value="500">500 Diamonds</option>
+    </select>
+    <select required>
+      <option value="">Metode Pembayaran</option>
+      <option value="dana">Dana</option>
+      <option value="gopay">Gopay</option>
+      <option value="ovo">OVO</option>
+      <option value="bank">Transfer Bank</option>
+    </select>
+    <textarea placeholder="Catatan tambahan (opsional)"></textarea>
+    <button class="btn" type="submit">Kirim</button>
+  </form>
+</section>
 
-      <div class="product">
-        <img src="https://upload.wikimedia.org/wikipedia/en/6/6a/Free_Fire_logo.png" alt="Free Fire">
-        <h3>Free Fire</h3>
-        <p>Isi diamond Free Fire langsung masuk!</p>
-        <a href="#" class="btn">Top-up Sekarang</a>
-      </div>
-
-      <div class="product">
-        <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/PUBG_Mobile_logo.png" alt="PUBG Mobile">
-        <h3>PUBG Mobile</h3>
-        <p>Top-up UC PUBG Mobile resmi dan aman.</p>
-        <a href="#" class="btn">Top-up Sekarang</a>
-      </div>
-
-      <div class="product">
-        <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Genshin_Impact_logo.png" alt="Genshin Impact">
-        <h3>Genshin Impact</h3>
-        <p>Top-up Genesis Crystals cepat dan terpercaya.</p>
-        <a href="#" class="btn">Top-up Sekarang</a>
-      </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="faq">
-      <h2 class="section-title">FAQ</h2>
-
-      <div class="faq-item">
-        <h4>Bagaimana cara top-up?</h4>
-        <p>Cukup pilih game, masukkan ID akun, pilih nominal, dan lakukan pembayaran.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Apakah aman?</h4>
-        <p>Top-up dilakukan melalui jalur resmi dan data kamu dijamin aman.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Metode pembayaran apa saja yang tersedia?</h4>
-        <p>Kami menerima e-wallet, transfer bank, dan pembayaran retail.</p>
-      </div>
-    </div>
-
-  </section>
-
-  <footer>
-    <p>© 2025 Rolandi Web Developer. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>Topup Game Gofxer &copy; 2025</p>
+  <div class="social-links">
+  <a href="https://instagram.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="30">
+  </a>
+  <a href="https://wa.me/nomorwa" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" width="30">
+  </a>
+  <a href="https://tiktok.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="30">
+  </a>
+</div>
+</footer>
 
 </body>
 </html>
